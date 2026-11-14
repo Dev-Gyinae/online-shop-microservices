@@ -1,0 +1,19 @@
+# values-k3s.yaml — Online Boutique on single-node k3s (non-GCP)
+#
+# Minimal overrides. The chart's defaults already include:
+#   - googleCloudOperations: profiler/tracing/metrics all false
+#   - recommendationService resources: 220Mi requests / 450Mi limits
+#   - adService resources: 180Mi requests / 300Mi limits
+#
+# Only two real changes needed for this environment:
+
+# 1. No load generator — synthetic traffic unneeded on a demo VM
+loadGenerator:
+  create: false
+
+# 2. Explicitly confirm GCP agents off (belt and suspenders —
+#    the chart default is already false, but we've been burned before)
+googleCloudOperations:
+  profiler: false
+  tracing: false
+  metrics: false
