@@ -54,7 +54,6 @@ Deployment and operations of an 11-service, polyglot e-commerce application on a
 | Storefront | Product listing (currency switched to EUR) |
 |---|---|
 | ![Storefront](k8s-microservices/Pics/frontend1.png) | ![Products](HelmCharts-microservice/Pictures/helmFE.png) |
-| ![Storefront](HelmCharts-microservice/Pictures/checkout.png) | ![Products](HelmCharts-microservice/Pictures/cart.png) |
 
 | Manifest deployment: all pods running | Helm deployment: release, pods, services, history |
 |---|---|
